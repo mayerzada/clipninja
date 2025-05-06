@@ -84,32 +84,9 @@
     <h1>ClipNinja</h1>
     <p>Transforme suas lives em clipes automaticamente.<br />Sem editar, sem esforço.</p>
     <form action="https://formspree.io/f/xdkggjzv" method="POST" onsubmit="showMessage(event)">
-  <input type="email" name="email" placeholder="Seu e-mail" required /> <br />
-  <button type="submit">Quero testar!</button>
-</form>
-<div class="success-message" id="success-message">
-  Obrigado! Você será avisado assim que a plataforma estiver pronta.
-</div>
-
-<script>
-  function showMessage(event) {
-    event.preventDefault();
-    const form = event.target;
-    const msg = document.getElementById("success-message");
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        form.reset();
-        msg.style.display = 'block';
-      }
-    });
-  }
-</script>
+      <input type="email" name="email" placeholder="Seu e-mail" required /> <br />
+      <button type="submit">Quero testar!</button>
+    </form>
     <div class="success-message" id="success-message">
       Obrigado! Você será avisado assim que a plataforma estiver pronta.
     </div>
